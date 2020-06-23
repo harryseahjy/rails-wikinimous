@@ -1,0 +1,17 @@
+<div class="container main-container col-12">
+    <%= form_for(@article) do |f| %>
+        <div class="row">
+            <div class="field d-flex flex-column col-12 my-2">
+              <%= f.label :title %>
+              <%= f.text_field :title, class: "form-control" %>
+            </div>
+        </div>
+        <div class="row">
+            <div class="field d-flex flex-column col-12 my-2">
+              <%= f.label :content %>
+              <%= f.text_field :content, class: "form-control" %>
+            </div>
+        </div>
+        <%= f.submit class: "btn btn-primary col-12 align-self-center m-auto" %>
+    <% end %>
+</div>

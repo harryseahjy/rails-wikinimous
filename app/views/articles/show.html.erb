@@ -1,0 +1,24 @@
+<div class="container main-container py-3 m-auto">
+    <div class="row d-flex flex-column justify-items-center">
+        <div class="show-title">
+            <h2><%= @article.title %></h2>
+        </div>
+        <div class="icons">
+            <div class="show-edit">
+                <%= link_to "Edit Article", edit_article_path(@article) %>
+            </div>
+            <div class="show-delete">
+                <%= link_to "Delete",
+                article_path(@article), method: :delete, data: { confirm: "Are you sure?"} %>
+            </div>
+        </div>
+    </div>
+    <hr>
+    <div class="row">
+        <div class="show-content">
+            <p><%= @article.content %></p>
+        </div>
+    </div>
+</div>
+
+

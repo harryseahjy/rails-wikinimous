@@ -1,0 +1,12 @@
+<div class="main-container p-5">
+    <% @articles.each do |article| %>
+    <div class="row d-flex flex-column">
+        <div class="index-article-title">
+            <h2><%= link_to "#{article.title}", article_path(article) %></h2>
+        </div>
+        <div class="index-article-content">
+            <p><%= article.content %></p>
+        </div>
+    </div>
+    <% end %>
+</div>
